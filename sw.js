@@ -1,5 +1,5 @@
 /* STCL Fall 2026 — network-first shell SW. Bump CACHE to force-update installed PWAs. */
-const CACHE="stcl-fall-2026-v5";
+const CACHE="stcl-fall-2026-v6";
 self.addEventListener("install",e=>{self.skipWaiting();});
 self.addEventListener("activate",e=>{e.waitUntil(
   caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
